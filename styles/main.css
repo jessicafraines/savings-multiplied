@@ -1,0 +1,131 @@
+/*header-savings multiplied*/
+@import url(http://fonts.googleapis.com/css?family=Corben:700);
+/*header-signin-register*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+/*header-buyselltrade nav*/
+
+/*header-whereparents*/
+
+/*midsection weremaking*/
+
+/*midsection buyingandselling*/
+
+/* Colors:
+/* Dark Teal: #69C4CC */
+/* Light Teal: #CFEFEE */
+
+body { 
+background-color: #69C4CC; 
+}
+
+h1.owls{
+font-family: 'Corben', cursive;
+color: #702C8D;
+}
+
+ul#signin{
+font-family: 'Raleway', sans-serif;
+}
+
+ul#signin a{
+text-decoration: none;
+padding: .5em;
+color: #69C4CC;
+}
+header { 
+background-color: #CFEFEE; 
+padding-top: 4em;
+}
+nav#main { 
+background-color: #F3CECD; 
+}
+section { 
+background-color: #FFFFFF; 
+}
+p{
+color: #69C4CC;
+font-family: 'Raleway', sans-serif;
+
+}
+
+/* Grid */
+body {
+}
+
+footer {
+  padding: 0 10em;
+}
+
+section {
+  margin: 0 10em;
+}
+header ul {
+  float: right;
+  list-style-type: none;
+}
+
+nav#main{
+  padding: .5em;
+}
+nav#main ul {
+  float: none;
+  margin: 0px;
+}
+
+nav#main ul li{
+  padding: 0em 1em;
+}
+nav#main ul li a, nav#main ul li form{
+  text-decoration: none;
+  color: #6F1549;
+  font-family: 'Corben', cursive;
+}
+header ul li, ul#contact li, footer ul li {
+  display: inline-block;
+}
+
+h2.border{
+  margin-top: 0px;
+  padding-top: 1em;
+  color: #8CB72D;
+  font-family: 'Corben', cursive;
+}
+h3.border{
+  margin-bottom: 0px;
+  color: #69C4CC;
+  clear: both;
+  text-align: right;
+}
+ul#kids li{
+  margin-left: 500px;
+  list-style: none;
+}
+
+ul#find li a{
+  padding: .5em;
+}
+ul#find{
+  text-align: center;
+}
+
+footer ul li a{
+  color: #CFEFEE;
+  padding: .5em;
+}
+footer ul{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+#about{
+  background-color:#69C4CC;
+  border-radius: 4em;
+  color: white;
+  padding: 1em;
+}
+#about a{
+  color: white;
+}
