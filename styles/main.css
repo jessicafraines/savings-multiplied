@@ -17,7 +17,6 @@
 
 
 
-
 /*Authentication*/
 header nav#authentication{
   float: right;
@@ -30,18 +29,18 @@ nav#authentication{
   clear: right;
 }
 nav#authentication ul li a{
-text-decoration: none;
-padding: .5em;
-color: #69C4CC;
+  text-decoration: none;
+  padding: .5em;
+  color: #69C4CC;
 }
-#authentication ul li + li::before{
-content: " | ";
-color: #69C4CC;
+#authentication ul li + li::before {
+  content: " | ";
+  color: #69C4CC;
 }
 
-header { 
-background-color: #CFEFEE; 
-padding-top: 4em;
+header {
+  background-color: #CFEFEE;
+  padding-top: 4em;
 }
 
 
@@ -134,10 +133,10 @@ nav#main ul li a, nav#main ul li form{
   color: #6F1549;
   font-family: 'Corben', cursive;
 }
-nav#main { 
-background-color: #F3CECD;
-text-align: center;
-padding: .5em; 
+nav#main {
+  background-color: #F3CECD;
+  text-align: center;
+  padding: .5em;
 }
 form{
   border-radius: 1em;
@@ -147,16 +146,19 @@ form{
 
 
 /*Mid Section*/
-section { 
-background-color: #FFFFFF; 
+section {
+  background-color: #FFFFFF;
 }
 p{
-color: #69C4CC;
-font-family: 'Raleway', sans-serif;
-padding-left: 1em;
+  color: #69C4CC;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 1em;
 }
 #shop{
   max-width: 100%;
+}
+img#shop :hover {
+  color: blue;
 }
 .left_column, .right_column{
   width: 50%;
@@ -170,6 +172,7 @@ ul#children{
 }
 ul#children *{
   max-width: 100%;
+  padding-right: 20px;
 }
 
 .left_column h2{
@@ -186,55 +189,6 @@ section:after{
   content: "";
   display: table;
   clear: both;
-}
-
-
-
-/*Screen adjust*/
-@media screen and (max-width: 700px){
-  body > section, header > section, nav#authentication, footer{
-    margin: 0 2em;
-  }
-}
-ul#find{
-  list-style: none;
-  padding: 0;
-  margin-top: 0px;
-}
-ul#find li{
-  display: inline-block;
-  width: 20%;
-  margin-right: 5%;
-}
-ul#find img{
-  max-width: 100%;
-}
-ul#find li:nth-child(4n){
-  margin-right: 0;
-}
-@media screen and (max-width: 700px){
-  ul#find li{
-    width: 47.5%;
-    margin: 0;
-    float: left;
-}
-  ul#find li:nth-child(odd){
-    clear: left;
-    margin-right: 5%;
-}
-}
-@media screen and (max-width: 40em){
-#children li img{
-  display: none;}
-div.left_column{
-  width: 100%;
-}
-ul.right_column{
-  display: none;
-} 
-#link ul li + li::before{
-content: "  ";
-}
 }
 
 
@@ -262,8 +216,8 @@ footer ul{
   font-family: 'Raleway', sans-serif;
 }
 #link ul li + li::before{
-content: " | ";
-color: #CFEFEE;
+  content: " | ";
+  color: #CFEFEE;
 }
 footer {
   padding: 0 10em;
@@ -286,8 +240,8 @@ a{
 section {
   margin: 0 10em;
 }
-body { 
-background-color: #69C4CC; 
+body {
+  background-color: #69C4CC;
 }
 
 
@@ -318,3 +272,55 @@ background-color: #69C4CC;
   border-radius: 1em;
   padding: 2em;
 }
+
+
+
+/*Screen adjust*/
+@media screen and (max-width: 700px){
+  body > section, header > section, nav#authentication, footer{
+    margin: 0 2em;
+}
+}
+ul#find{
+  list-style: none;
+  padding: 0;
+ /* margin-top: 0px;*/
+}
+ul#find li{
+  display: inline-block;
+  width: 20%;
+  margin-right: 5%;
+}
+ul#find img{
+  max-width: 100%;
+}
+ul#find li:nth-child(4n){
+  margin-right: 0;
+}
+@media screen and (max-width: 700px){
+  ul#find li{
+    width: 47.5%;
+    margin: 0;
+    float: left;
+}
+ul#find li:nth-child(odd){
+  clear: left;
+  margin-right: 5%;
+}
+}
+@media screen and (max-width: 40em){
+  #children li img{
+    display: none;}
+  div.left_column{
+    width: 100%;
+}
+ul.right_column{
+  display: none;
+}
+#link ul li + li::before{
+  content: "  ";
+}
+}
+
+
+

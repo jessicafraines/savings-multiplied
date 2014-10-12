@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <header>
+   <header>
       <nav id="authentication">
         <ul>
           <li><a href="#">sign in</a></li>
@@ -76,39 +76,18 @@
       </nav>
     </footer>
     <div class="login-modal">
-	<div class="lightbox"></div>
-	<div class="login-form">
-	  <form>
-            <label>username</label>
-	    <input type="text" placeholder="username">
-	    <label>password</label>
-	    <input type="password" placeholder="password">
-	    <input type="submit" value="submit">
-	    <input type="button" value="cancel" class="cancel">
-	  </form>
-	</div>
+      <div class="lightbox"></div>
+      <div class="login-form">
+      <form>
+        <label>username</label>
+        <input type="text" placeholder="username">
+        <label>password</label>
+        <input type="password" placeholder="password">
+        <input type="submit" value="submit">
+        <input type="button" value="cancel" class="cancel">
+      </form>
+      </div>
     </div>
   </body>
-  <script>
-    function hide(element){
-      element.style.display = "none";
-    }
-    function show(element){
-      element.style.display = "block";
-    }
-    var lightbox = document.querySelector('.lightbox');
-    lightbox.addEventListener('click', function(){
-      hide(document.querySelector('.login-modal'));
-    });
-
-    var authentication = document.querySelector('#authentication a');
-    authentication.addEventListener('click', function(){
-      show(document.querySelector('.login-modal'));
-    });
-
-    var cancel = document.querySelector('.cancel');
-    cancel.addEventListener('click', function(){
-      hide(document.querySelector('.login-modal'));
-    });
-  </script>
+  <script src="scripts/main.js"></script>
 </html>
