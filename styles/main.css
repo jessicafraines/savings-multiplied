@@ -157,9 +157,6 @@ p{
 #shop{
   max-width: 100%;
 }
-img#shop :hover {
-  color: blue;
-}
 .left_column, .right_column{
   width: 50%;
   float: left;
@@ -182,13 +179,29 @@ ul#children *{
   font-family: 'Corben', cursive;
   padding-left: 1em;
 }
-section{
+section {
   clear: both;
 }
-section:after{
+section:after {
   content: "";
   display: table;
   clear: both;
+}
+ul#find {
+  list-style: none;
+  padding: 0;
+  margin-top: 0px;
+}
+ul#find li {
+  display: inline-block;
+  width: 20%;
+  margin-right: 5%;
+}
+ul#find img{
+  max-width: 100%;
+}
+ul#find li:nth-child(4n){
+  margin-right: 0;
 }
 
 
@@ -207,15 +220,15 @@ header ul li, ul#find li, footer ul li {
 
 
 /*Footer*/
-footer ul li a{
+footer ul li a {
   color: #CFEFEE;
   padding: .5em;
 }
-footer ul{
+footer ul {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
-#link ul li + li::before{
+#link ul li + li::before {
   content: " | ";
   color: #CFEFEE;
 }
@@ -228,13 +241,13 @@ footer {
 
 
 /*Misc*/
-section#header{
+section#header {
   border-radius: 1em 1em 0em 0em;
 }
-section.main{
+section.main {
   border-radius: 0em 0em 1em 1em;
 }
-a{
+a {
   text-decoration: none;
 }
 section {
@@ -248,11 +261,11 @@ body {
 
 
 /*MODAL*/
-.login-modal{
+.login-modal {
   display: none;
 }
 
-.lightbox{
+.lightbox {
   background-color: #000;
   opacity: .5;
   position: fixed;
@@ -260,7 +273,7 @@ body {
   height: 100%;
   width: 100%;
 }
-.login-form{
+.login-form {
   border: 3px solid grey;
   width: 300px;
   position: absolute;
@@ -276,51 +289,63 @@ body {
 
 
 /*Screen adjust*/
-@media screen and (max-width: 700px){
-  body > section, header > section, nav#authentication, footer{
+@media screen and (max-width: 700px) {
+  body > section, header > section, nav#authentication, footer {
     margin: 0 2em;
-}
-}
-ul#find{
-  list-style: none;
-  padding: 0;
- /* margin-top: 0px;*/
-}
-ul#find li{
-  display: inline-block;
-  width: 20%;
-  margin-right: 5%;
-}
-ul#find img{
-  max-width: 100%;
-}
-ul#find li:nth-child(4n){
-  margin-right: 0;
-}
-@media screen and (max-width: 700px){
-  ul#find li{
+  }
+  ul#find li {
     width: 47.5%;
     margin: 0;
     float: left;
+  }
+  ul#find li:nth-child(odd) {
+    clear: left;
+    margin-right: 5%;
+  }
+  ul#find {
+    margin-top: 0px;
+  }
 }
-ul#find li:nth-child(odd){
-  clear: left;
-  margin-right: 5%;
-}
-}
-@media screen and (max-width: 40em){
-  #children li img{
-    display: none;}
+@media screen and (max-width: 40em) {
+  #children li img {
+    display: none;
+  }
   div.left_column{
     width: 100%;
-}
-ul.right_column{
-  display: none;
-}
-#link ul li + li::before{
-  content: "  ";
-}
+  }
+  ul.right_column{
+    display: none;
+  }
+  #link ul li + li::before {
+    content: "  ";
+  }
 }
 
 
+div.small-column{
+  border: 1px solid #EDFAD1;
+  background: #EDFAD1;
+}
+.small-column h2{
+  margin-top: 0px;
+  padding-top: 1em;
+  color: #8CB72D;
+  font-family: 'Corben', cursive;
+  padding-left: 1em;
+}
+.small-column {
+  width: 50%;
+  float: left;
+}
 
+.large-column {
+  float: right;
+}
+#items li{
+  border: 1px solid #EDFAD1;
+  background-color: #EDFAD1;
+  width: 20px;
+  height: 20px;
+  list-style-type: none;
+  display: inline-block;
+}
