@@ -1,20 +1,34 @@
-function hide(element){
-      element.style.display = "none";
+
+    function hide(element){
+      if(element.classList)
+        element.classList.add('hidden');
+      else
+        element.className += ' ' + 'hidden';
     }
     function show(element){
-      element.style.display = "block";
+      if(element.classList)
+        element.classList.remove('hidden');
+      else
+        element.className = element.className
+          .replace(new RegExp('(^|\\b)'+ 'hidden'.split(' ')
+          .join('|') + '(\\b|$)', 'gi'), ' ');
     }
-    var lightbox = document.querySelector('.lightbox');
-    lightbox.addEventListener('click', function(){
-      hide(document.querySelector('.login-modal'));
-    });
 
-    var authentication = document.querySelector('#authentication a');
-    authentication.addEventListener('click', function(){
-      show(document.querySelector('.login-modal'));
-    });
 
-    var cancel = document.querySelector('.cancel');
-    cancel.addEventListener('click', function(){
-      hide(document.querySelector('.login-modal'));
-    });
+
+    var loginModalToggleAreas = document.querySelectorAll(
+        '.lightbox, #authentication a, .cancel'
+    );
+
+
+    for(var i = 0; i < loginModalToggleAreas.length; i++){
+      loginModalToggleAreas[i].addEventListener('click', function(){
+        toggle(document.querySelector('.login-modal'));
+      });
+    }
+
+
+    function toggle(element){
+      if(element.classList)
+        element.classList.toggle('hidden')
+    }

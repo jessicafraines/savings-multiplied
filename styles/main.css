@@ -261,9 +261,6 @@ body {
 
 
 /*MODAL*/
-.login-modal {
-  display: none;
-}
 
 .lightbox {
   background-color: #000;
@@ -286,6 +283,9 @@ body {
   padding: 2em;
 }
 
+.hidden {
+  display: none;
+}
 
 
 /*Screen adjust*/
