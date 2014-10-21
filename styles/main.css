@@ -325,6 +325,9 @@ body {
 div.small-column{
   border: 1px solid #EDFAD1;
   background: #EDFAD1;
+  border-radius: 25px;
+  width: 200px;
+  margin: 20px;       
 }
 .small-column h2{
   margin-top: 0px;
@@ -335,17 +338,23 @@ div.small-column{
 }
 .small-column {
   width: 50%;
-  float: left;
+  /*float: left;*/
 }
 
 .large-column {
-  float: right;
+  display: inline;
 }
+
+#items{
+ /* float: right;*/
+}
+
 #items li{
   border: 1px solid #EDFAD1;
   background-color: #EDFAD1;
-  width: 20px;
-  height: 20px;
+  width: 75px;
+  height: 75px;
   list-style-type: none;
-  display: inline-block;
+  margin: 15px;
+  float: left;
 }
