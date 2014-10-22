@@ -7,9 +7,23 @@ function getJSON(url, cb){
   xhr.send();
 }
 
-function addItemToList($list, itemText){
+function addItemToList($list, item){
   var $li = document.createElement('li');
-  $li.innerHTML = itemText;
+  var $img = document.createElement('img');
+  var $p = document.createElement('p');
+  var $p1 = document.createElement('p');
+  var $p2 = document.createElement('p');
+  var $p3 = document.createElement('p');
+  $p.innerHTML = item.price;
+  $p1.innerHTML = item.title;
+  $p2.innerHTML = item.seller;
+  $p3.innerHTML = item.remaining;
+  $img.src = item.image;
+  $li.appendChild($img);
+  $li.appendChild($p);
+  $li.appendChild($p1);
+  $li.appendChild($p2);
+  $li.appendChild($p3);
   $list.appendChild($li);
 }
 
@@ -48,7 +62,7 @@ function toggle(element){
   } else {
     var classes = element.className.split(' ');
     var classIndex;
-    for (var i = 0; i < classes.length; i++;) {
+    for (var i = 0; i < classes.length; i++) {
       if (classes[i] === 'hidden')
         classIndex = i;
     }
@@ -63,6 +77,10 @@ function toggle(element){
 }
 document.addEventListener("DOMContentLoaded", function(){
   getJSON('https://savingsmultipliedssh.firebaseio.com/itemlist.json', function(data){
-    
-    });
+    var item = data;
+    var $ul = document.getElementById("items");
+    for(var i = 0; i < item.length; i++){
+      addItemToList($ul, item[i]);
+    }
+  });
 });
